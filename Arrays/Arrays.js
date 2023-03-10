@@ -1,18 +1,20 @@
-let letters = [];
-let word = '';
 
-let rword = '';
 
 
 
 const makePalindrum = (word)=>{
+    let letters = [];
+// let word = '';
+
+let rword = '';
+
     for (i=0; i<word.length; i++ ){
         letters.push(word[i]);
        
     //    console.log(rword);
     }
     
-    for (i=0; i<letters.length; i++ ){
+    for (i=0; i<word.length; i++ ){
            
         rword += letters.pop();
     }
@@ -24,4 +26,9 @@ const makePalindrum = (word)=>{
        }
     
 }
-    makePalindrum('dad');
+    makePalindrum('racecar');
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+//  fruits.pop();
+// // console.log(poped);
+// document.getElementById("demo").innerHTML = fruits;
