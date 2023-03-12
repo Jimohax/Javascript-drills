@@ -50,9 +50,6 @@
 // width = window.prompt("width");
 // height = window.prompt("height");
 
-
-
- 
 // function getArea(width, height) {
 // 	let result = width * height;
 // 	return result
@@ -113,9 +110,147 @@ let temp ;
     }
 */
 
-let fruits = ["orange", "apple", "mango"];
-fruits.push("pawpaw");
-fruits.pop();
-fruits.shift();
-fruits.unshift("lemon");
-console.log(fruits);
+// let fruits = ["orange", "apple", "mango", "banana"];
+// fruits.push("pawpaw");
+// fruits.pop();
+// fruits.shift();
+// fruits.unshift("lemon");
+//  fruits = fruits.sort().reverse();
+//  for(let fruit of fruits){
+
+//      console.log(fruit);
+//  }
+
+// numbers = [1, 2,3,4,5,6]
+// for(let num of numbers){
+//     let newResult = squarenum(num);
+//     console.log(newResult);
+// }
+
+// function squarenum(element) {
+//     return Math.pow(element, 2);
+// }
+
+// let result = squarenum(5);
+
+// numbers = [1, 2,3,4,5,6];
+// let result = numbers.map(squarenum);
+
+// result.forEach(printo);
+
+// function squarenum(element) {
+//     return Math.pow(element, 2);
+// }
+
+// console.log(result);
+
+// function printo(element){
+//     console.log(element);
+// }
+
+// numbers = [1, 12,31,4,15,6];
+
+// result = numbers.forEach(squarenum);
+// console.log(result);
+
+// function squarenum(element) {
+//     return Math.pow(element, 2);
+// }
+
+// let total = numbers.reduce(cost)
+// console.log(total);
+
+// function cost(total, element) {
+//     return total + element
+// }
+// console.log(numbers.reduce(cost))
+
+//    numbers.sort((a,b)=>a-b);
+//    descend= numbers.sort((a,b)=>b-a);
+//    descend.forEach((x)=>console.log(x));
+
+// let cards = ["A", "2", "3", "K", "Q", "J"];
+
+//      console.log(shuffle(cards));
+
+//   cards.forEach((x)=> console.log(x));
+
+// function shuffle(array){
+
+//     let mp = array.length;
+
+//     while(mp !=0){
+//         rp = Math.floor(Math.random() * array.length);
+//         mp -= 1;
+
+//         let mpi = array[mp];
+//         array[mp] = array[rp];
+//         array[rp] = mpi;
+//     }
+//     return array;
+
+// }
+
+// console.log(mpi);
+// console.log("hey");
+
+class Animal {
+	alive = true;
+	eat() {
+		console.log(`this ${this.name} can eat`);
+	}
+	sleep() {
+		console.log(`this ${this.name} can sleep`);
+	}
+    constructor(type, age, color){
+        this.type = type;
+        this.age = age;
+        this.color = color;
+}
+}
+
+class Bird extends Animal {
+	name = "bird";
+	
+         constructor( type, age, color){
+        super(type,age,color);
+        this.specie = specie;
+        this.color = color;
+        }
+        
+        
+    }
+    fly() {
+		console.log(`this ${this.name} can fly`);
+	}
+
+class Fish extends Animal {
+	name = "fish";
+	swim() {
+		console.log(`this ${this.name} can swim`);
+	}
+}
+class Rabbit extends Animal {
+	name = "rabbit";
+	run() {
+		console.log(`this ${this.name} can run`);
+	}
+}
+
+const bird = new Bird();
+const fish = new Fish();
+const rabbit = new Rabbit();
+
+console.log(bird.alive);
+console.log(bird.fly());
+console.log(fish.alive);
+console.log(fish.swim());
+rabbit.run();
+
+
+
+// const bird1 = new Bird('hawk', 3, 'white', 50);
+
+// console.log(bird1.name);
+// console.log(bird1.color);
+// bird1.fly();
