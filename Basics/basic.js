@@ -193,7 +193,7 @@ let temp ;
 
 // console.log(mpi);
 // console.log("hey");
-
+/*
 class Animal {
 	alive = true;
 	eat() {
@@ -212,40 +212,64 @@ class Animal {
 class Bird extends Animal {
 	name = "bird";
 	
-         constructor( type, age, color){
+         constructor( type, age, color, speed, ){
         super(type,age,color);
-        this.specie = specie;
-        this.color = color;
+        this.speed = speed;
         }
-        
-        
-    }
+                
+   
     fly() {
 		console.log(`this ${this.name} can fly`);
 	}
-
+}
 class Fish extends Animal {
 	name = "fish";
+    constructor( type, age, color, speed, ){
+        super(type,age,color);
+        
+        this.speed = speed;
+        }
 	swim() {
 		console.log(`this ${this.name} can swim`);
 	}
 }
-class Rabbit extends Animal {
-	name = "rabbit";
+class Mammals extends Animal {
+	name = "mammal";
+    constructor( type, age, color, speed){
+        super(type,age,color);
+        this.speed = speed;
+        }
 	run() {
 		console.log(`this ${this.name} can run`);
 	}
 }
 
-const bird = new Bird();
-const fish = new Fish();
-const rabbit = new Rabbit();
 
-console.log(bird.alive);
-console.log(bird.fly());
-console.log(fish.alive);
-console.log(fish.swim());
-rabbit.run();
+
+const fish1 = new Fish('shark',3,'blue','20m/s');
+const fish2 = new Fish('catfish',1,'brown','5m/s');
+const bird1 = new Bird('hawk', 2,'white','50m/s');
+const bird2 = new Bird('hen', 1, 'white', '1m/s');
+const mammal1 = new Mammals('dog', 1, 'black', '20m/s');
+const mammal2 = new Mammals('monkey', 1, 'brown', '10m/s');
+
+changeColor(mammal1, 'white');
+getAnimal(mammal1);
+
+function getAnimal(animal) {
+    console.log(animal.alive);
+    console.log(animal.type);
+    console.log(animal.color);
+    // animal.fly();
+    // animal.swim();
+    animal.run();   
+    
+}
+function changeColor(animal, color){
+    animal.color = color
+}
+
+
 
 
 
@@ -254,3 +278,34 @@ rabbit.run();
 // console.log(bird1.name);
 // console.log(bird1.color);
 // bird1.fly();
+*/
+
+
+setInterval(update, 1000);
+// timing(date)
+
+function update(){
+    let date = new Date();
+    
+    document.getElementById("time").innerHTML = timing(date);
+   
+    
+    function timing(date) {
+        let hour = date.getHours();
+    let min = date.getMinutes();
+    let sec = date.getSeconds();
+    let amPm = hour >= 12? "Pm" : "Am";
+    hour = hour % 12 || 12;
+
+    hour = addZeros(hour);
+    min = addZeros(min);
+    sec = addZeros(sec);
+    
+   return `${hour}: ${min}: ${sec} ${amPm}`;
+    }
+    
+    function addZeros(time){
+        time = time.toString();
+       return  time.length < 2? "0" + time : time
+    }
+}
