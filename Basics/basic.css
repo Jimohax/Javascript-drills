@@ -1,5 +1,51 @@
-label{
+/* label{
     text-align: center;
     display: block;
     font-size: 5rem;
+} */
+
+/* #div{
+    background-color: lightgreen;
+    width: 100px;
+    height: 100px;
+    position: relative;}
+    /* top: 30px; */
+
+    .timeControl{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    
+    .timeControl>*{
+        border: 2px solid white;
+        border-radius: 12px;
+        height: 50px;
+        width: 60px;
+        background-color: gray;
+        color: white;
+        font-size: 17px;
+        
+
+    }
+    body{
+        background-color: aquamarine;
+    }
+    .timeContainer{
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        width: 300px;
+        background-color: #222222;
+    border: 2px solid;
+    color: white;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.timeDisplay{
+    font-size: 80px;
+    color: lightgreen;
 }

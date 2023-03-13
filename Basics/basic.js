@@ -280,7 +280,7 @@ function changeColor(animal, color){
 // bird1.fly();
 */
 
-
+/*
 setInterval(update, 1000);
 // timing(date)
 
@@ -309,3 +309,100 @@ function update(){
        return  time.length < 2? "0" + time : time
     }
 }
+*/
+/*
+document.addEventListener("keydown", move);
+
+let x=0;
+let y=0;
+let div =document.getElementById("div");
+function move(event) {
+
+    switch (event.key) {
+        case "ArrowDown":
+            y +=5;
+            div.style.top = y + "px";
+            break;
+        case "ArrowUp": 
+                y -=5;
+                div.style.top = y + "px";
+                break;
+        case "ArrowLeft":
+                x +=5;
+                div.style.right = x + "px";
+                break;
+        case "ArrowRight":
+            x -=5;
+            div.style.right = x + "px";
+            break;
+        default:
+            break;
+    }
+}
+*/
+
+/*
+let start = document.getElementById("button");
+start.addEventListener("click", move);
+
+function move() {
+    let x= 0;
+    let y=0;
+    let degrees = 0;
+    let div = document.getElementById("div");
+    let motion =setInterval(moving, 5);
+
+   
+    function moving() {
+        if(degrees >= 360){
+            clearInterval(motion);
+        }else{
+            degrees += 2;
+            div.style.transform = "rotateZ("+degrees+"deg)";
+        }
+    }
+
+}
+*/
+
+
+// setInterval(update, 75);
+
+/*
+
+let start = document.querySelector(".start");
+let pause = document.querySelector(".pause");
+let reset = document.querySelector(".reset");
+let timeDisplay = document.querySelector("timeDisplay")
+
+let secs =0;
+let mins = 0;
+let hrs = 0;
+let paused = true;
+let startTime = 0;
+let elapsedTime = 0;
+
+
+// start.addEventListener("click", ()=>{
+//     if(paused){
+//         paused = false;
+//         startTime = Date.now() - elapsedTime;
+//         intervalId = setInterval(update, 75);
+//     }
+// })
+
+// update();
+
+
+function update(){
+     secs =  Math.floor(Date.now()/ 1000) % 60;
+     mins =  Math.floor(Date.now()/ (1000 * 60)) % 60;
+     hrs =  Math.floor(Date.now()/ (1000 * 60 * 60 )) % 60;
+    
+     timeDisplay.textContent = `${hrs} : ${mins} : ${secs}`
+     
+}
+
+// console.log(hrs);*/
+
+document.querySelector(".timeDisplay").textContent = "Hello boy"
